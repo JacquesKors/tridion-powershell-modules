@@ -86,6 +86,7 @@ function DownloadAndInstall
 		$net.DownloadFile("$baseDownloadUrl/$file", $destination);
 		Write-Progress -Activity "Downloading module files" -Status "$file" -PercentComplete ((++$idx / $max) * 100);
 	}
+	Write-Progress -Activity "Downloading module files" -Completed;
 
 	Completed;
 }
